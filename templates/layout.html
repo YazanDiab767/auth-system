@@ -20,6 +20,16 @@
         <title>{% block title %} Login {% endblock %}</title>
     </head>
     <body>
+
+        {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }} text-center alert-dismissible fade show" role="alert">
+                <b>{{ message }}</b>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        {% endfor %}
+        {% endif %}
+
         <div class="container-fluid main-container">
             {% block content %}
             {% endblock %}

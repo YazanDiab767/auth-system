@@ -11,15 +11,6 @@
 
 {% block content %}
 
-    {% if messages %}
-        {% for message in messages %}
-            <div class="alert alert-success text-center alert-dismissible fade show" role="alert">
-                <b>{{ message }}</b>
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-        {% endfor %}
-    {% endif %}
-
     <section class="ftco-section">
         <div class="container">
             <div class="row justify-content-center">
@@ -51,13 +42,13 @@
 
                                 <div class="w-50">
                                     <label class="checkbox-wrap checkbox-primary">
-                                        <input type="checkbox" checked>
+                                        <input type="checkbox" name="remember_me" checked>
                                         <span class="checkmark"></span> Remember Me
                                     </label>
                                 </div>
                                 <div style="width: 10% !important;"></div>
                                 <div class="text-md-right" style="width: 40% !important;">
-                                    <a href="#" class="ml-5"><i class="fa fa-lock" aria-hidden="true"></i> Forgot
+                                    <a href="{% url 'password_reset' %}" class="ml-5"><i class="fa fa-lock" aria-hidden="true"></i> Forgot
                                         Password</a>
                                 </div>
 
