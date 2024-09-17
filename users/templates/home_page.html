@@ -4,8 +4,58 @@
 {% block body %}
     <div class="container">
         <div class="row justify-content-center mt-4">
-            <div class="col-sm-6 text-center">
-                <h1><i class="fa fa-smile-o" aria-hidden="true"></i> Welcome to the staff platform</h1>
+            <div class="col-sm-12">
+                <div class="text-center">
+                    <h1 style="color: var()"><i class="fa fa-smile-o" aria-hidden="true"></i> Welcome to the staff platform</h1>
+                </div>
+                <hr>
+                <div class="container-fluid info-user">
+                    <div class="row text-left">
+                        <div class="col-sm-3"></div>
+                        <div class="col-sm-3">
+                            <i class="fa fa-user" aria-hidden="true"></i> Username:
+                        </div>
+                        <div class="col-sm-2">
+                            {{ user.username }}
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-sm-3"></div>
+                        <div class="col-sm-3">
+                            <i class="fa fa-envelope" aria-hidden="true"></i> Email:
+                        </div>
+                        <div class="col-sm-2">
+                            {{ user.email }}
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-sm-3"></div>
+                        <div class="col-sm-3">
+                            <i class="fa fa-address-card" aria-hidden="true"></i> Address:
+                        </div>
+                        <div class="col-sm-2">
+                            {{ user.address }}
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-sm-3"></div>
+                        <div class="col-sm-3">
+                            <i class="fa fa-phone-square" aria-hidden="true"></i> Phone Number:
+                        </div>
+                        <div class="col-sm-3">
+                            {{ user.phone_number }}
+                        </div>
+                    </div>
+                     <div class="row mt-4">
+                        <div class="col-sm-3"></div>
+                        <div class="col-sm-3">
+                            <i class="fa fa-clock-o" aria-hidden="true"></i> Date joined:
+                        </div>
+                        <div class="col-sm-3">
+                            {{ user.date_joined }}
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

@@ -40,7 +40,8 @@ def login_view(request):
         user = authenticate(request, email=email, password=password)
         if user is not None:
             login(request, user)
-            messages.success(request, 'Login successful! Welcome ' + user.username + '!')
+            last_login = user.last_login.strftime('%Y-%m-%d %H:%M')
+            messages.success(request, 'Login successful! Welcome ' + user.username + '! Last login at: ' + last_login)
             return redirect('home')
         else:
             return render(request, 'login_page.html', {'error': 'Invalid email or password', 'email': email})
