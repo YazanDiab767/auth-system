@@ -9,4 +9,8 @@ urlpatterns = [
     path('register/', views.register_view, name='register'),
     path('home/', views.home_view, name='home'),
     path('logout/', LogoutView.as_view(next_page='login'), name='logout'),
+    path('activate/<str:email>/', views.activate, name='activate'),
+
+    path('test/', views.send_test_email, name='test_email'),
+
 ]

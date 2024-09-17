@@ -28,11 +28,12 @@ class CustomUserManager(BaseUserManager):
 
 class CustomUser(AbstractUser):
     email = models.EmailField(unique=True, primary_key=True)
-    username = models.CharField(max_length=150, unique=True)
+    username = models.CharField(max_length=150, blank=True)
     address = models.CharField(max_length=200, null=True, blank=True)
     phone_number = models.CharField(max_length=10, null=True, blank=True)
+    is_active = models.BooleanField(default=False) # to active by email
 
     objects = CustomUserManager()
 
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = ['username']
+    REQUIRED_FIELDS = []
