@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block style %}
+    <link rel="stylesheet" href="{% static 'css/user/bars.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/user/home.css' %}"/>
+{% endblock %}
+
+{% block content %}
+
+    {% include 'header.html' %}
+
+
+    <div class="d-flex">
+        {% include 'sidebar.html' %}
+
+        <main class="flex-grow-1 p-3">
+            {% block body %}
+            {% endblock body %}
+        </main>
+    </div>
+
+{% endblock content %}

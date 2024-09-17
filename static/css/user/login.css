@@ -1332,6 +1332,7 @@ body {
 
 .login-wrap h3{
     color: var(--pbmit-global-color);
+    font-size: 20px;
 }
 
 .login-wrap .icon {
